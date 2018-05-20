@@ -12,12 +12,18 @@ public class Calendar {
 		
 		//숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("달을 입력하세요");
-		int month=scanner.nextInt();
-		
+	
 		int maxDays[]= {31,28,31,30,31,30,31,31,30,31,30,31};
+		//반복 입력 가능하도록 프로그램 변경하기
+		System.out.println("반복횟수를 입력하세요.");
+		int i=scanner.nextInt();
 		
-		System.out.println(month+"월은"+maxDays[month-1]+"있습니다.");
+		for(int j=0; j<i; j++)
+		{
+			System.out.print("월을 입력하세요.");
+			int month=scanner.nextInt();
+			System.out.println(month+"월은"+maxDays[month-1]+"있습니다.");
+		}
 		scanner.close();
 	}
 } 
