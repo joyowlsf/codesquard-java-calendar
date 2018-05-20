@@ -15,13 +15,17 @@ public class Calendar {
 	
 		int maxDays[]= {31,28,31,30,31,30,31,31,30,31,30,31};
 		//반복 입력 가능하도록 프로그램 변경하기
-		System.out.println("반복횟수를 입력하세요.");
-		int i=scanner.nextInt();
-		
-		for(int j=0; j<i; j++)
+	
+		while(true)
 		{
-			System.out.print("월을 입력하세요.");
+			System.out.println("월을 입력하세요.");
+			System.out.print(">");
 			int month=scanner.nextInt();
+			if(month==-1)
+			{
+				System.out.println("Have a nice day!");
+				break;
+			}
 			System.out.println(month+"월은"+maxDays[month-1]+"있습니다.");
 		}
 		scanner.close();
